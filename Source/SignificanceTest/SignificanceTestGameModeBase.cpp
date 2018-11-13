@@ -90,28 +90,20 @@ float MySignificanceFunction(USignificanceManager::FManagedObjectInfo* Obj, cons
 
 void MyPostSignificanceFunction(USignificanceManager::FManagedObjectInfo* Obj, float OldSignificance, float Significance, bool bUnregistered)
 {
-	// EPostSignificanceType::Sequentialで関数を登録している場合、ここは直列処理として呼ばれる
-	if (APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(Obj->GetObject(), 0))
+	if (ASignificanceActor* Actor = Cast<ASignificanceActor>(Obj->GetObject()))
 	{
-		if (ASignificanceActor* Actor = Cast<ASignificanceActor>(Obj->GetObject()))
+		if (Significance > 0.f)
 		{
-			// プレイヤーと対象オブジェクトの距離を取得
-			FVector Distance = PlayerPawn->GetActorLocation() - Actor->GetActorLocation();
-
-			if (Distance.Size() < GSignificanceDistance)
-			{
-				// 距離内だった場合はTickをオンにし、TextColorを赤に変更
-				Actor->SetActorTickEnabled(true);
-				Actor->SetTextColor(FColor::Red);
-			}
-			else
-			{
-				// 距離外だった場合はTickをオフにし、TextColorを白に変更
-				Actor->SetActorTickEnabled(false);
-				Actor->SetTextColor(FColor::White);
-			}
+			// Significanceが0よりも上の場合はTickをオンにし、TextColorを赤に変更
+			Actor->SetActorTickEnabled(true);
+			Actor->SetTextColor(FColor::Red);
 		}
-
+		else
+		{
+			// Significanceが0になった場合は距離外だった場合はTickをオフにし、TextColorを白に変更
+			Actor->SetActorTickEnabled(false);
+			Actor->SetTextColor(FColor::White);
+		}
 	}
 }
 
