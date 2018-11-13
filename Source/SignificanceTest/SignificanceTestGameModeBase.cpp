@@ -100,7 +100,7 @@ void MyPostSignificanceFunction(USignificanceManager::FManagedObjectInfo* Obj, f
 		}
 		else
 		{
-			// Significanceが0になった場合は距離外だった場合はTickをオフにし、TextColorを白に変更
+			// Significanceが0になった場合はTickをオフにし、TextColorを白に変更
 			Actor->SetActorTickEnabled(false);
 			Actor->SetTextColor(FColor::White);
 		}
