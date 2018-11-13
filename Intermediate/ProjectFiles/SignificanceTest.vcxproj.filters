@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\SignificanceTest.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{7F25D9D1-E2DF-4E91-803A-F98A1E75AEB6}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SignificanceTest.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\SignificanceTestEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{4A21451B-6170-45D5-AFDC-EF17CBD4C763}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\SignificanceTest">
+      <UniqueIdentifier>{6CEDC2A8-1FEB-4AE1-BA7A-4103A18FA14C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SignificanceTest\SignificanceActor.cpp">
+      <Filter>Source\SignificanceTest</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SignificanceTest\SignificanceActor.h">
+      <Filter>Source\SignificanceTest</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\SignificanceTest\SignificanceTest.Build.cs">
+      <Filter>Source\SignificanceTest</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\SignificanceTest\SignificanceTest.cpp">
+      <Filter>Source\SignificanceTest</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SignificanceTest\SignificanceTest.h">
+      <Filter>Source\SignificanceTest</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SignificanceTest\SignificanceTestGameModeBase.cpp">
+      <Filter>Source\SignificanceTest</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SignificanceTest\SignificanceTestGameModeBase.h">
+      <Filter>Source\SignificanceTest</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
